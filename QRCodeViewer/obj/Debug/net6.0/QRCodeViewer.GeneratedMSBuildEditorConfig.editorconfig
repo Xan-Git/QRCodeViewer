@@ -23,24 +23,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/XanS/Coding/Tutorials/QRCodeViewer/QRCodeViewer/Pages/QRCode.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUVJDb2RlLnJhem9y
+[C:/Users/XanS/Coding/Tutorials/QRCodeViewer/QRCodeViewer/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/XanS/Coding/Tutorials/QRCodeViewer/QRCodeViewer/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/XanS/Coding/Tutorials/QRCodeViewer/QRCodeViewer/Shared/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-cju9vxuc2v
-
-[C:/Users/XanS/Coding/Tutorials/QRCodeViewer/QRCodeViewer/Shared/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-74284dyyi6
-
-[C:/Users/XanS/Coding/Tutorials/QRCodeViewer/QRCodeViewer/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/XanS/Coding/Tutorials/QRCodeViewer/QRCodeViewer/Pages/_Host.cshtml]

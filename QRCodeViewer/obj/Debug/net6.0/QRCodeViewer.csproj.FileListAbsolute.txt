@@ -17,10 +17,7 @@ C:\Users\XanS\Coding\Tutorials\QRCodeViewer\QRCodeViewer\bin\Debug\net6.0\QRCode
 C:\Users\XanS\Coding\Tutorials\QRCodeViewer\QRCodeViewer\bin\Debug\net6.0\QRCoder.dll
 C:\Users\XanS\Coding\Tutorials\QRCodeViewer\QRCodeViewer\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\XanS\Coding\Tutorials\QRCodeViewer\QRCodeViewer\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\XanS\Coding\Tutorials\QRCodeViewer\QRCodeViewer\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
-C:\Users\XanS\Coding\Tutorials\QRCodeViewer\QRCodeViewer\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 C:\Users\XanS\Coding\Tutorials\QRCodeViewer\QRCodeViewer\obj\Debug\net6.0\scopedcss\bundle\QRCodeViewer.styles.css
-C:\Users\XanS\Coding\Tutorials\QRCodeViewer\QRCodeViewer\obj\Debug\net6.0\scopedcss\projectbundle\QRCodeViewer.bundle.scp.css
 C:\Users\XanS\Coding\Tutorials\QRCodeViewer\QRCodeViewer\obj\Debug\net6.0\QRCodeViewer.csproj.CopyComplete
 C:\Users\XanS\Coding\Tutorials\QRCodeViewer\QRCodeViewer\obj\Debug\net6.0\QRCodeViewer.dll
 C:\Users\XanS\Coding\Tutorials\QRCodeViewer\QRCodeViewer\obj\Debug\net6.0\refint\QRCodeViewer.dll

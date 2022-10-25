@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vZeV3O4Lh1UGUzRa0HpTGjTgG4lnzwK3jSYGoByzQ+6JMmSYgxcsaiA+Zde12ZAw+zOalZSQmlc5x4VCWc4z/Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\XanS\\Coding\\Tutorials\\QRCodeViewer\\QRCodeViewer\\QRCodeViewer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\XanS\\.nuget\\packages\\qrcoder\\1.4.3\\qrcoder.1.4.3.nupkg.sha512"
+  ],
+  "logs": []
+}

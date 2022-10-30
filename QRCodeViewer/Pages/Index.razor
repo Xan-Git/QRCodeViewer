@@ -23,27 +23,32 @@
             <p>
                 Enter your URL below to generate a QR Code and download the image.
             </p>
-            <form id="generate-form" class="mt-4">
-                <input @ref="urlInput"
-                       type="url"
-                       placeholder="Enter a URL"
-                       class="w-full border-2 border-gray-200 rounded p-3 text-gray-dark mr-2 mb-5 focus:outline-red-500"
-                       @bind="qrUrl" />
+            <EditForm id="generate-form" class="mt-4" Model="@qrCode" OnSubmit="@LoadQrCode">
+                <InputText @bind-Value="qrCode.Url"
+                           placeholder="Enter a URL"
+                           class="w-full border-2 border-gray-200 rounded p-3 text-gray-dark mr-2 mb-5 focus:outline-red-500" />
 
-                <select id="size" class="w-full border-2 border-gray-200 rounded p-3 text-gray-dark mr-2 focus:outline-red-500">
+                <InputSelect TValue="int" @bind-Value="qrCode.Size" id="size" class="w-full border-2 border-gray-200 rounded p-3 text-gray-dark mr-2 focus:outline-red-500">
                     <option value="100">100x100</option>
                     <option value="200">200x200</option>
                     <option value="300" selected>300x300</option>
                     <option value="400">400x400</option>
                     <option value="500">500x500</option>
                     <option value="600">600x600</option>
-                </select>
+                </InputSelect>
 
-                <button type="button" class="bg-gray-600 rounded w-full text-white py-3 px-4 mt-5 hover:bg-black focus:outline-red-600" @onclick="LoadQrCode">
+                
+                <InputRadioGroup TValue="Color" @bind-Value="@qrCode.DarkColor">
+                    <InputRadio TValue="Color" Value="Color.Green">Green</InputRadio>
+                    <InputRadio TValue="Color" Value="Color.Blue">Blue</InputRadio>
+                </InputRadioGroup>
+                
+
+                <button type="submit" class="bg-gray-600 rounded w-full text-white py-3 px-4 mt-5 hover:bg-black focus:outline-red-600">
                     Generate QR Code
                 </button>
 
-            </form>
+            </EditForm>
 
         </div>
         <div class="w-full md:w-1/3 self-center">
@@ -83,15 +88,18 @@
 @code {
     public string qrSrc { get; set; } = "";
     public bool isLoading { get; set; } = false;
-    public string qrUrl { get; set; } = "";
-    private ElementReference urlInput;
+    // public string qrUrl { get; set; } = "";
+    // private InputText? urlInput = new InputText();
+
+    private QrDto qrCode = new QrDto(); 
+
 
     byte[] GenerateQR()
     {
         QRCodeGenerator qrGenerator = new QRCodeGenerator();
-        QRCodeData qrCodeData = qrGenerator.CreateQrCode(qrUrl, QRCodeGenerator.ECCLevel.Q);
-        BitmapByteQRCode qrCode = new BitmapByteQRCode(qrCodeData);
-        byte[] qrAsBmpByteArr = qrCode.GetGraphic(20);
+        QRCodeData qrCodeData = qrGenerator.CreateQrCode(qrCode.Url, QRCodeGenerator.ECCLevel.Q);
+        BitmapByteQRCode bitmapByteQR = new BitmapByteQRCode(qrCodeData);
+        byte[] qrAsBmpByteArr = bitmapByteQR.GetGraphic(20, darkColorRgb: qrCode.DarkColor.ColorToRGB(), lightColorRgb: qrCode.LightColor.ColorToRGB());
         return qrAsBmpByteArr;
     }
 
@@ -103,6 +111,8 @@
         isLoading = false;
     }
 
-    protected override async Task OnAfterRenderAsync(bool fr) => await urlInput.FocusAsync();
+    // VALUES ARE BEING PASSED PROPERLY. NOW WE NEED TO READ THEM INTO THE QR GENERATION FUNCTION TO CHANGE IT ACCORDINGLY
+
+    // protected override async Task OnAfterRenderAsync(bool fr) => await urlInput.Element.Value.FocusAsync();
 
 }
